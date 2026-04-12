@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="brain.html" class="nav__link nav__link--active">Brain</a>
+      <a href="art.html" class="nav__link">Art</a>
+      <a href="index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="work.html" class="nav__link">Work</a>
+    <a href="brain.html" class="nav__link nav__link--active">Brain</a>
+    <a href="art.html" class="nav__link">Art</a>
+    <a href="index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+
+  <div class="page-wrapper">
+
+    <div class="brain-header">
+      <h1 class="brain-header__title fade-up">Brain</h1>
+      <p class="brain-header__hint fade-up fade-up-d1">Hover a node to explore</p>
+    </div>
+
+    <div class="brain-canvas-wrap fade-up fade-up-d2">
+      <canvas id="brainCanvas"></canvas>
+    </div>
+
+    <div class="brain-legend fade-up fade-up-d3">
+      <div class="brain-legend__item">
+        <div class="brain-legend__dot" style="background:#c8b89a;"></div>
+        <span>Core / Software</span>
+      </div>
+      <div class="brain-legend__item">
+        <div class="brain-legend__dot" style="background:#7ec4cf;"></div>
+        <span>Pipeline &amp; Code</span>
+      </div>
+      <div class="brain-legend__item">
+        <div class="brain-legend__dot" style="background:#9b8fcc;"></div>
+        <span>Motion Capture</span>
+      </div>
+      <div class="brain-legend__item">
+        <div class="brain-legend__dot" style="background:#7ec994;"></div>
+        <span>AI &amp; Emerging</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  (function() {
+    // ===== NODE DATA =====
+    // To add a new skill: add an entry to NODES and connection(s) to EDGES
+    const NODES = [
+      { id: 'hub',    label: 'Brain',            cat: 'hub',      x: 0.50, y: 0.50 },
+      { id: 'maya',   label: 'Maya',             cat: 'core',     x: 0.22, y: 0.22 },
+      { id: 'blender',label: 'Blender',          cat: 'core',     x: 0.35, y: 0.14 },
+      { id: 'ue',     label: 'Unreal Engine',    cat: 'core',     x: 0.15, y: 0.38 },
+      { id: 'xgen',   label: 'XGen',             cat: 'core',     x: 0.12, y: 0.58 },
+      { id: 'yeti',   label: 'Yeti',             cat: 'core',     x: 0.20, y: 0.70 },
+      { id: 'python', label: 'Python',           cat: 'pipeline', x: 0.72, y: 0.20 },
+      { id: 'mel',    label: 'MEL',              cat: 'pipeline', x: 0.82, y: 0.34 },
+      { id: 'auto',   label: 'Automation',       cat: 'pipeline', x: 0.85, y: 0.50 },
+      { id: 'fbx',    label: 'FBX / Alembic',    cat: 'pipeline', x: 0.80, y: 0.65 },
+      { id: 'assets', label: 'Asset Pipeline',   cat: 'pipeline', x: 0.68, y: 0.75 },
+      { id: 'rokoko', label: 'Rokoko',           cat: 'mocap',    x: 0.25, y: 0.84 },
+      { id: 'vcam',   label: 'Virtual Camera',   cat: 'mocap',    x: 0.42, y: 0.88 },
+      { id: 'mocap',  label: 'Mocap Integration',cat: 'mocap',    x: 0.58, y: 0.88 },
+      { id: 'genai',  label: 'Generative AI',    cat: 'ai',       x: 0.60, y: 0.14 },
+      { id: 'ai3d',   label: 'AI 3D Tools',      cat: 'ai',       x: 0.75, y: 0.08 },
+      { id: 'aimocap',label: 'AI Mocap',          cat: 'ai',       x: 0.42, y: 0.10 },
+      { id: 'aicode', label: 'AI Coding',         cat: 'ai',       x: 0.88, y: 0.18 },
+    ];
+
+    const EDGES = [
+      ['hub','maya'],['hub','ue'],['hub','python'],['hub','auto'],
+      ['hub','rokoko'],['hub','genai'],['hub','mocap'],['hub','vcam'],
+      ['maya','blender'],['maya','xgen'],['maya','yeti'],['maya','mel'],['maya','python'],
+      ['ue','fbx'],['ue','vcam'],['ue','auto'],
+      ['python','mel'],['python','auto'],['python','assets'],['python','aicode'],
+      ['auto','assets'],['auto','fbx'],
+      ['rokoko','mocap'],['rokoko','vcam'],
+      ['mocap','aimocap'],
+      ['genai','ai3d'],['genai','aimocap'],['genai','aicode'],
+      ['aimocap','mel'],
+      ['xgen','yeti'],
+      ['assets','fbx'],
+    ];
+
+    // ===== CATEGORY COLOURS =====
+    const CAT_COLORS = {
+      hub:      '#e8d5b0',
+      core:     '#c8b89a',
+      pipeline: '#7ec4cf',
+      mocap:    '#9b8fcc',
+      ai:       '#7ec994',
+    };
+
+    // ===== CANVAS SETUP =====
+    const canvas = document.getElementById('brainCanvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, dpr;
+    let hoveredNode = null;
+    let animTime = 0;
+
+    // Smooth scale tracking per node
+    const nodeScales = {};
+    NODES.forEach(n => nodeScales[n.id] = 1);
+
+    // Build adjacency map
+    const adj = {};
+    NODES.forEach(n => adj[n.id] = []);
+    EDGES.forEach(([a, b]) => {
+      adj[a].push(b);
+      adj[b].push(a);
+    });
+
+    function resize() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      dpr = window.devicePixelRatio || 1;
+      W = rect.width;
+      // More height on mobile for better spacing
+      H = W < 600 ? W * 0.85 : W * 0.62;
+      canvas.width = W * dpr;
+      canvas.height = H * dpr;
+      canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function getNodePos(node) {
+      return { x: node.x * W, y: node.y * H };
+    }
+
+    function dist(x1, y1, x2, y2) {
+      return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+    }
+
+    // Responsive base radius
+    function getBaseRadius(isHub) {
+      if (W < 480) return isHub ? 22 : 15;
+      if (W < 768) return isHub ? 26 : 17;
+      return isHub ? 32 : 22;
+    }
+
+    // ===== DRAWING =====
+    function draw() {
+      animTime += 0.016;
+      ctx.clearRect(0, 0, W, H);
+
+      const litSet = new Set();
+      if (hoveredNode) {
+        litSet.add(hoveredNode);
+        (adj[hoveredNode] || []).forEach(id => litSet.add(id));
+      }
+
+      const isHovering = hoveredNode !== null;
+
+      // Smoothly animate node scales
+      NODES.forEach(node => {
+        const isHovered = hoveredNode === node.id;
+        const isLit = !isHovering || litSet.has(node.id);
+        let targetScale = 1;
+        if (isHovered) targetScale = 1.35;
+        else if (isLit && isHovering) targetScale = 1.15;
+        // Smooth lerp
+        nodeScales[node.id] += (targetScale - nodeScales[node.id]) * 0.12;
+      });
+
+      // Draw edges
+      EDGES.forEach(([aId, bId]) => {
+        const a = NODES.find(n => n.id === aId);
+        const b = NODES.find(n => n.id === bId);
+        const pa = getNodePos(a);
+        const pb = getNodePos(b);
+        const edgeLit = isHovering && litSet.has(aId) && litSet.has(bId);
+
+        ctx.beginPath();
+        ctx.moveTo(pa.x, pa.y);
+        ctx.lineTo(pb.x, pb.y);
+        ctx.strokeStyle = edgeLit
+          ? 'rgba(255,255,255,0.28)'
+          : 'rgba(255,255,255,0.06)';
+        ctx.lineWidth = edgeLit ? 1.5 : 0.5;
+        ctx.stroke();
+
+        // Travelling dot on lit edges
+        if (edgeLit) {
+          const t = ((animTime * 0.5) % 1);
+          const dx = pa.x + (pb.x - pa.x) * t;
+          const dy = pa.y + (pb.y - pa.y) * t;
+          ctx.beginPath();
+          ctx.arc(dx, dy, 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,0.6)';
+          ctx.fill();
+        }
+      });
+
+      // Draw nodes
+      NODES.forEach(node => {
+        const pos = getNodePos(node);
+        const color = CAT_COLORS[node.cat];
+        const isHub = node.cat === 'hub';
+        const isLit = !isHovering || litSet.has(node.id);
+        const isHovered = hoveredNode === node.id;
+        const scale = nodeScales[node.id];
+
+        let baseRadius = getBaseRadius(isHub);
+        let radius = baseRadius * scale;
+
+        // Hub pulse
+        if (isHub) {
+          radius += Math.sin(animTime * 2) * 2;
+        }
+
+        const alpha = isLit ? 1 : 0.15;
+
+        // Glow on hovered/lit nodes
+        if (isLit && isHovering) {
+          const glowSize = isHovered ? 16 : 10;
+          ctx.beginPath();
+          ctx.arc(pos.x, pos.y, radius + glowSize, 0, Math.PI * 2);
+          const grad = ctx.createRadialGradient(pos.x, pos.y, radius, pos.x, pos.y, radius + glowSize);
+          grad.addColorStop(0, color + '44');
+          grad.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad;
+          ctx.fill();
+        }
+
+        // Node circle
+        ctx.beginPath();
+        ctx.arc(pos.x, pos.y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = isHub ? color : '#161616';
+        ctx.globalAlpha = alpha;
+        ctx.fill();
+        ctx.strokeStyle = color;
+        ctx.lineWidth = isHub ? 2.5 : 1.5;
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+
+        // Label — scales with node
+        const baseFontSize = isHub ? 12 : (W < 600 ? 8 : 10);
+        const fontSize = Math.round(baseFontSize * Math.min(scale, 1.2));
+        ctx.font = `500 ${fontSize}px 'DM Mono', monospace`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = isHub ? '#0d0d0d' : color;
+        ctx.globalAlpha = alpha;
+        ctx.fillText(node.label, pos.x, pos.y);
+        ctx.globalAlpha = 1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    // ===== INTERACTION =====
+    function getHoveredNode(mx, my) {
+      // Check hub first, then others
+      for (let i = NODES.length - 1; i >= 0; i--) {
+        const node = NODES[i];
+        const pos = getNodePos(node);
+        const r = getBaseRadius(node.cat === 'hub') * (nodeScales[node.id] || 1);
+        if (dist(mx, my, pos.x, pos.y) <= r + 6) return node.id;
+      }
+      return null;
+    }
+
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      hoveredNode = getHoveredNode(mx, my);
+      canvas.style.cursor = hoveredNode ? 'pointer' : 'default';
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      hoveredNode = null;
+    });
+
+    // Touch support for mobile (tap to toggle)
+    canvas.addEventListener('touchstart', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      const mx = touch.clientX - rect.left;
+      const my = touch.clientY - rect.top;
+      const node = getHoveredNode(mx, my);
+      hoveredNode = hoveredNode === node ? null : node;
+      e.preventDefault();
+    }, { passive: false });
+
+    // Tap outside canvas on mobile clears hover
+    document.addEventListener('touchstart', (e) => {
+      if (!canvas.contains(e.target)) hoveredNode = null;
+    });
+
+    // ===== INIT =====
+    window.addEventListener('resize', resize);
+    resize();
+    draw();
+  })();
+  </script>
+
+</body>
+</html>

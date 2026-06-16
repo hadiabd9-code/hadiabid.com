@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dora the Explorer — Hadi Abid</title>
+  <title>Dora the Explorer + Pipeline Development — Hadi Abid</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -31,8 +31,8 @@
   <div class="page-wrapper">
     <div class="show-detail">
       <a href="../work.html" class="show-detail__back">← Back to Work</a>
-      <h1 class="show-detail__title fade-up">Dora the Explorer</h1>
-      <p class="show-detail__meta fade-up fade-up-d1">Technical Director · Paramount+</p>
+      <h1 class="show-detail__title fade-up">Dora the Explorer <span style="color:var(--accent,#7ec4cf);">+ Pipeline Development</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Technical Director · Pipeline Studios</p>
       <div class="show-detail__divider fade-up fade-up-d2"></div>
 
       <div class="show-detail__poster-area fade-up fade-up-d2">
@@ -58,17 +58,26 @@
         </div>
       </div>
 
-      <p class="show-detail__description fade-up fade-up-d4">Technical leadership across the production — designing workflows, integrating tools, and providing cross-department technical support from concept through final delivery.</p>
+      <p class="show-detail__description fade-up fade-up-d4">My current role at Pipeline Studios spans two tracks: production technical direction on <em>Dora the Explorer</em>, and studio-level pipeline development built and validated on internal POCs — designing workflows, building production-ready tools, and supporting delivery across departments.</p>
 
-      <h3 class="show-detail__section-heading fade-up fade-up-d4">Key Contributions</h3>
+      <h3 class="show-detail__section-heading fade-up fade-up-d4">Production — Dora the Explorer</h3>
       <div class="show-detail__list fade-up fade-up-d5">
         <div class="show-detail__list-item">Designed and guided production workflows across multiple departments, ensuring efficient handoff between concept, animation, lighting, and final delivery stages.</div>
         <div class="show-detail__list-item">Acted as a technical bridge between artists, supervisors, and pipeline engineers, translating production needs into technical solutions.</div>
         <div class="show-detail__list-item">Developed automation scripts in Maya using Python and MEL to streamline repetitive tasks including scene cleanup and batch processing.</div>
         <div class="show-detail__list-item">Built scripting tools to identify, gather, and package assets and scene dependencies for client delivery.</div>
-        <div class="show-detail__list-item">Implemented real-time workflows using Unreal Engine for scene assembly, layout, lighting setup, and rendering exploration.</div>
-        <div class="show-detail__list-item">Set up motion capture workflows using Rokoko suits and integrated captured data into animation pipelines.</div>
-        <div class="show-detail__list-item">Led internal R&D efforts evaluating emerging AI tools across concept art, modeling, animation, and lighting departments.</div>
+      </div>
+
+      <h3 class="show-detail__section-heading fade-up fade-up-d5">Studio Pipeline Development — Internal POCs &amp; R&amp;D</h3>
+      <div class="show-detail__list fade-up fade-up-d5">
+        <div class="show-detail__list-item">Solo-owned the studio's Maya→Unreal pipeline, building, documenting, and maintaining production-ready tools from the ground up.</div>
+        <div class="show-detail__list-item">Built a Maya / PySide FBX export tool with token-aware scene parsing, automated material validation, and rig detection — cutting shot and asset export from ~8 min to ~30 sec (~95%).</div>
+        <div class="show-detail__list-item">Developed an Unreal rendering tool on the Movie Render Queue Python API (PySide6) with sequence and preset auto-discovery and headless command-line rendering — collapsing ~12 min of sequencer setup to ~10 sec (~98%).</div>
+        <div class="show-detail__list-item">Integrated render-farm submission (Deadline) with pre-job Perforce sync — turning multi-shot rendering from ~40 min of manual setup into one-click batch submission (~99%), and stood up a dedicated Unreal render-farm worker end to end.</div>
+        <div class="show-detail__list-item">Built an Unreal sequencer-assembly tool that generates and links master and sub-sequences (camera / animation / lighting) in single or batch mode.</div>
+        <div class="show-detail__list-item">Authored a selective Perforce deploy pipeline for clean, atomic delivery of tool updates to artists' Maya and Unreal environments.</div>
+        <div class="show-detail__list-item">Created a mocap-driven layout workflow (Rokoko) that gave the animation department an estimated ~10–20% head start; evaluated AI and markerless capture tools (Move.ai, Moverse, Cascadeur).</div>
+        <div class="show-detail__list-item">Built the tool suite solo with AI-assisted development as a force multiplier, and led internal R&amp;D evaluating emerging AI tools across concept, modeling, animation, and lighting — reporting practical adoption and limitations to studio leadership.</div>
       </div>
     </div>
   </div>

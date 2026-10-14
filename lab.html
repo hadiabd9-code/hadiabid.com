@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="personal.html" class="nav__link">Personal</a>
+      <a href="lab.html" class="nav__link nav__link--active">Lab</a>
+      <a href="brain.html" class="nav__link">Brain</a>
+      <a href="index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="work.html" class="nav__link">Work</a>
+    <a href="personal.html" class="nav__link">Personal</a>
+    <a href="lab.html" class="nav__link nav__link--active">Lab</a>
+    <a href="brain.html" class="nav__link">Brain</a>
+    <a href="index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="rt-header">
+      <h1 class="work-header__title fade-up">Lab</h1>
+      <p class="work-header__hint fade-up fade-up-d1">Tools and products I build · pipeline, automation, AI</p>
+    </div>
+    <div class="rt-grid fade-up fade-up-d2">
+      <a href="lab/darkroom.html" class="rt-card">
+        <div class="rt-card__media">
+          <img src="assets/stills/render-farm.jpg" alt="Darkroom">
+        </div>
+        <div class="rt-card__body">
+          <div class="rt-card__title">Darkroom</div>
+          <div class="rt-card__role">Headless Unreal render farm · pre-flight checks, crash recovery, live dashboard</div>
+          <div class="rt-card__tags"><span class="rt-tag">Python</span><span class="rt-tag">Unreal Python</span><span class="rt-tag">MRQ</span><span class="rt-tag">ffmpeg</span></div>
+        </div>
+      </a>
+      <div class="rt-card rt-card--soon">
+        <div class="rt-card__body">
+          <div class="rt-card__title">.aibacklot</div>
+          <div class="rt-card__role">AI animation pipeline · script → shots → keyframes → video</div>
+        </div>
+      </div>
+      <div class="rt-card rt-card--soon">
+        <div class="rt-card__body">
+          <div class="rt-card__title">SERA</div>
+          <div class="rt-card__role">My agent-based studio assistant · build log coming soon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/realtime.js"></script>
+</body>
+</html>

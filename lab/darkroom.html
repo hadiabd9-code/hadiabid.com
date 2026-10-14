@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darkroom — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link">Personal</a>
+      <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+      <a href="../brain.html" class="nav__link">Brain</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link">Personal</a>
+    <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+    <a href="../brain.html" class="nav__link">Brain</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../lab.html" class="show-detail__back">← Back to Lab</a>
+      <h1 class="show-detail__title fade-up">Darkroom <span style="color:var(--accent);">· headless render farm</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Pipeline tool · Python · Unreal Engine 5.8 · 2026</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="rt-video"><img src="../assets/stills/render-farm.jpg" alt="Darkroom render dashboard"></div>
+      <p class="rt-caption">Live dashboard: current job with latest frame, queue, history, GPU and disk.</p>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Role</div>
+          <div class="show-detail__info-value">Solo · design and build</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Stack</div>
+          <div class="show-detail__info-value">Python · Unreal Python API · MRQ · ffmpeg</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Built</div>
+          <div class="show-detail__info-value">October 2026</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Status</div>
+          <div class="show-detail__info-value">In use for this portfolio</div>
+        </div>
+      </div>
+      <div class="placeholder">Overview: the problem (editor renders crashing the whole queue, wrong maps, the open editor competing for GPU memory) and what the tool does about it.</div>
+      <h3 class="show-detail__section-heading">What it does</h3>
+      <div class="placeholder">Bullets to finalize: job list → pre-flight checks (assets, map/sequence mismatch, disk, open editor) → manifests built headless → each job in its own off-screen process → crash detection + retry → report → MP4 encode → live dashboard.</div>
+      <h3 class="show-detail__section-heading">Results</h3>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">First batch</div>
+          <div class="show-detail__info-value">11 / 11 jobs done</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Crashes</div>
+          <div class="show-detail__info-value">0 with the editor closed</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Forest 4K pass</div>
+          <div class="show-detail__info-value">~6 min headless</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">View modes</div>
+          <div class="show-detail__info-value">Beauty · Lighting · Wireframe</div>
+        </div>
+      </div>
+      <div class="placeholder">Check these numbers before publishing.</div>
+      <h3 class="show-detail__section-heading">Next</h3>
+      <div class="placeholder">Roadmap: resume from last frame, phone notifications, web UI for building queues.</div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

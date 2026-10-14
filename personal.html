@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="personal.html" class="nav__link nav__link--active">Personal</a>
+      <a href="lab.html" class="nav__link">Lab</a>
+      <a href="brain.html" class="nav__link">Brain</a>
+      <a href="index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="work.html" class="nav__link">Work</a>
+    <a href="personal.html" class="nav__link nav__link--active">Personal</a>
+    <a href="lab.html" class="nav__link">Lab</a>
+    <a href="brain.html" class="nav__link">Brain</a>
+    <a href="index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="rt-header">
+      <h1 class="work-header__title fade-up">Personal</h1>
+      <p class="work-header__hint fade-up fade-up-d1">Real-time pieces, experiments and art · Hover to preview</p>
+    </div>
+    <div class="rt-grid fade-up fade-up-d2">
+      <a href="personal/biomes-desert.html" class="rt-card">
+        <div class="rt-card__media">
+          <img src="assets/stills/desert-cine.jpg" alt="Biomes · Desert">
+          <video src="assets/video/desert-cine.mp4" muted loop playsinline preload="none"></video>
+        </div>
+        <div class="rt-card__body">
+          <div class="rt-card__title">Biomes · Desert</div>
+          <div class="rt-card__role">Layout · Animation · VFX · Cinematography</div>
+          <div class="rt-card__tags"><span class="rt-tag">Unreal 5.8</span><span class="rt-tag">Sequencer</span><span class="rt-tag">Niagara</span></div>
+        </div>
+      </a>
+      <a href="personal/biomes-forest.html" class="rt-card">
+        <div class="rt-card__media">
+          <img src="assets/stills/forest-wide.jpg" alt="Biomes · Forest">
+          <video src="assets/video/forest-wide.mp4" muted loop playsinline preload="none"></video>
+        </div>
+        <div class="rt-card__body">
+          <div class="rt-card__title">Biomes · Forest</div>
+          <div class="rt-card__role">Environment · Water FX · Lighting</div>
+          <div class="rt-card__tags"><span class="rt-tag">Unreal 5.8</span><span class="rt-tag">PCG</span><span class="rt-tag">Water</span></div>
+        </div>
+      </a>
+      <div class="rt-card rt-card--soon">
+        <div class="rt-card__body">
+          <div class="rt-card__title">Prison Rave</div>
+          <div class="rt-card__role">MetaHuman crowd · work in progress</div>
+        </div>
+      </div>
+      <div class="rt-card rt-card--soon">
+        <div class="rt-card__body">
+          <div class="rt-card__title">ComfyUI</div>
+          <div class="rt-card__role">Local gen-AI piece · coming soon</div>
+        </div>
+      </div>
+    </div>
+    <div class="rt-header">
+      <h1 class="work-header__title fade-up">Art &amp; concepts</h1>
+      <p class="work-header__hint fade-up fade-up-d1">Concept art, design sheets and stills</p>
+    </div>
+    <div class="rt-grid">
+      <div class="rt-card rt-card--soon">
+        <div class="rt-card__body">
+          <div class="rt-card__title">Art</div>
+          <div class="rt-card__role">Gallery coming soon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/realtime.js"></script>
+</body>
+</html>

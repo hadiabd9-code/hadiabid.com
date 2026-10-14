@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomes: Desert — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+      <a href="../lab.html" class="nav__link">Lab</a>
+      <a href="../brain.html" class="nav__link">Brain</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+    <a href="../lab.html" class="nav__link">Lab</a>
+    <a href="../brain.html" class="nav__link">Brain</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../personal.html" class="show-detail__back">← Back to Personal</a>
+      <h1 class="show-detail__title fade-up">Biomes <span style="color:var(--accent);">· Desert</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Personal project · Unreal Engine 5.8 · 2026</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="rt-video"><video src="../assets/video/desert-cine.mp4" poster="../assets/stills/desert-cine.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <p class="rt-caption">10 s · 2.39:1 · golem vs mecha squad</p>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Role</div>
+          <div class="show-detail__info-value">Solo · layout, animation, VFX, cinematography</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Engine</div>
+          <div class="show-detail__info-value">Unreal Engine 5.8</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Tools</div>
+          <div class="show-detail__info-value">Sequencer · Control Rig · Niagara · MRQ</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Year</div>
+          <div class="show-detail__info-value">2026</div>
+        </div>
+      </div>
+      <div class="placeholder">Overview: the beat (golem ambush, missile strike, fall), the goal of the piece, what it shows.</div>
+      <div class="rt-split rt-split--vertical">
+        <video src="../assets/video/desert-insta.mp4" poster="../assets/stills/desert-insta.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div>
+          <h3 class="show-detail__section-heading" style="margin-top:0">Vertical cut</h3>
+          <div class="placeholder">Notes on the 9:16 "passing car" version for Instagram: rail-mounted camera, car-feel shakes, zoom.</div>
+        </div>
+      </div>
+      <h3 class="show-detail__section-heading">Passes</h3>
+      <div data-compare>
+      <div class="compare-tabs">
+        <button class="compare-tab is-active" data-src="../assets/video/desert-cine-light.mp4" data-under="../assets/video/desert-cine.mp4" data-label="Lighting">Cinematic · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/desert-cine-wire.mp4" data-under="../assets/video/desert-cine.mp4" data-label="Wireframe">Cinematic · Wireframe</button>
+        <button class="compare-tab" data-src="../assets/video/desert-insta-light.mp4" data-under="../assets/video/desert-insta.mp4" data-label="Lighting">Vertical · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/desert-insta-wire.mp4" data-under="../assets/video/desert-insta.mp4" data-label="Wireframe">Vertical · Wireframe</button>
+      </div>
+      <div class="compare">
+        <video class="compare__under" src="../assets/video/desert-cine.mp4" autoplay muted loop playsinline></video>
+        <div class="compare__top"><video src="../assets/video/desert-cine-light.mp4" autoplay muted loop playsinline></video></div>
+        <div class="compare__handle"></div>
+        <span class="compare__label compare__label--l">Lighting</span>
+        <span class="compare__label compare__label--r">Final</span>
+      </div>
+      </div>
+      <p class="rt-caption">Drag to compare the final frame with the lighting and wireframe passes. All passes rendered headless with my render submitter.</p>
+      <h3 class="show-detail__section-heading">What I built</h3>
+      <div class="placeholder">Bullet list: rigging/retargeting the cast, root-motion clip chaining, missile launch/trail/impact FX, 38 bullet impacts, footstep dust, golem eye glow, camera rail + shakes.</div>
+      <h3 class="show-detail__section-heading">Breakdown</h3>
+      <div class="placeholder">Breakdown video or stills.</div>
+      <h3 class="show-detail__section-heading">Tech notes</h3>
+      <div class="placeholder">E.g. why one-shot FX fired at frame 0 in Movie Render Queue (temporal sub-sampling stretches spawn sections) and how keyed spawn tracks fixed it.</div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

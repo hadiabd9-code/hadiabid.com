@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prison Rave — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+      <a href="../lab.html" class="nav__link">Lab</a>
+      <a href="../brain.html" class="nav__link">Brain</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+    <a href="../lab.html" class="nav__link">Lab</a>
+    <a href="../brain.html" class="nav__link">Brain</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../personal.html" class="show-detail__back">← Back to Personal</a>
+      <h1 class="show-detail__title fade-up">Prison <span style="color:var(--accent);">Rave</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Personal project · Unreal Engine 5.8 · 2026</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="rt-video"><video src="../assets/video/prisonrave-main.mp4" poster="../assets/stills/prisonrave-main.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <p class="rt-caption">23 s · 2.39:1 · ~200 MetaHumans</p>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Role</div>
+          <div class="show-detail__info-value">Solo · crowd, lighting, music sync, rendering</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Engine</div>
+          <div class="show-detail__info-value">Unreal Engine 5.8</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Tools</div>
+          <div class="show-detail__info-value">MetaHuman · Mass crowd · Sequencer · MRQ · Python</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Year</div>
+          <div class="show-detail__info-value">2026</div>
+        </div>
+      </div>
+      <div class="placeholder">Overview: a rave inside a prison block. The goal (a believable dancing MetaHuman crowd on a 32 GB PC), what's real-time, and what it shows about you.</div>
+      <h3 class="show-detail__section-heading">Angles</h3>
+      <div class="rt-shots">
+        <video src="../assets/video/prisonrave-cine.mp4" poster="../assets/stills/prisonrave-cine.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="../assets/video/prisonrave-cine240.mp4" poster="../assets/stills/prisonrave-cine240.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="rt-split rt-split--vertical">
+        <video src="../assets/video/prisonrave-insta.mp4" poster="../assets/stills/prisonrave-insta.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div>
+          <h3 class="show-detail__section-heading" style="margin-top:0">Vertical cut</h3>
+          <div class="placeholder">Notes on the 9:16 version for Instagram.</div>
+        </div>
+      </div>
+      <h3 class="show-detail__section-heading">Passes</h3>
+      <div data-compare>
+      <div class="compare-tabs">
+        <button class="compare-tab is-active" data-src="../assets/video/prisonrave-cine-light.mp4" data-under="../assets/video/prisonrave-cine.mp4" data-label="Lighting">Cinematic · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine-wire.mp4" data-under="../assets/video/prisonrave-cine.mp4" data-label="Wireframe">Cinematic · Wireframe</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine240-light.mp4" data-under="../assets/video/prisonrave-cine240.mp4" data-label="Lighting">Angle 2 · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine240-wire.mp4" data-under="../assets/video/prisonrave-cine240.mp4" data-label="Wireframe">Angle 2 · Wireframe</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-yt-light.mp4" data-under="../assets/video/prisonrave-yt.mp4" data-label="Lighting">Wide · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-yt-wire.mp4" data-under="../assets/video/prisonrave-yt.mp4" data-label="Wireframe">Wide · Wireframe</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-insta-light.mp4" data-under="../assets/video/prisonrave-insta.mp4" data-label="Lighting">Vertical · Lighting</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-insta-wire.mp4" data-under="../assets/video/prisonrave-insta.mp4" data-label="Wireframe">Vertical · Wireframe</button>
+      </div>
+      <div class="compare">
+        <video class="compare__under" src="../assets/video/prisonrave-cine.mp4" autoplay muted loop playsinline></video>
+        <div class="compare__top"><video src="../assets/video/prisonrave-cine-light.mp4" autoplay muted loop playsinline></video></div>
+        <div class="compare__handle"></div>
+        <span class="compare__label compare__label--l">Lighting</span>
+        <span class="compare__label compare__label--r">Final</span>
+      </div>
+      </div>
+      <p class="rt-caption">Drag to compare the final frame with the lighting and wireframe passes. All passes rendered headless with my render submitter.</p>
+      <h3 class="show-detail__section-heading">Wide</h3>
+      <div class="rt-video"><video src="../assets/video/prisonrave-yt.mp4" poster="../assets/stills/prisonrave-yt.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <h3 class="show-detail__section-heading">What I built</h3>
+      <div class="placeholder">Bullet list, e.g. ~200-person MetaHuman crowd on 16 Party Pack dances with no same-dance neighbours; fixed looks per character; 62 LED panels as an audio visualizer from a baked spectrum texture; fluoro chase on the offbeat hi-hat; DJ moving heads keyed to the kick (Python bake from beat CSVs); renders through Darkroom.</div>
+      <h3 class="show-detail__section-heading">Breakdown</h3>
+      <div class="placeholder">Breakdown video: empty prison → MetaHumans → placement → idle → dancing → lights + music.</div>
+      <h3 class="show-detail__section-heading">Tech notes</h3>
+      <div class="placeholder">E.g. the crowd's RAM budget (32 GB, Simulate ~71 GB commit), the late crowd spawn with 1 temporal sample and the 3000-frame warm-up fix, the UE 5.8 crowd face-material bug.</div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

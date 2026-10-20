@@ -1,0 +1,11 @@
+# Cloudflare Pages response headers (see security-review-2026-10-20.md, Fix 1).
+# CSP is Report-Only for now: check the browser console on every page for "[Report Only] Refused to ...",
+# then rename the header to Content-Security-Policy to enforce it.
+# style-src 'unsafe-inline' is for the style="..." attributes (aspect-ratio, legend dots).
+# HSTS is left out on purpose: add it only after Always Use HTTPS is on in the Cloudflare dashboard.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; frame-src https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'

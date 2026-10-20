@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Containment — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+      <a href="../lab.html" class="nav__link">Lab</a>
+      <a href="../brain.html" class="nav__link">Brain</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link nav__link--active">Personal</a>
+    <a href="../lab.html" class="nav__link">Lab</a>
+    <a href="../brain.html" class="nav__link">Brain</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../personal.html" class="show-detail__back">← Back to Personal</a>
+      <h1 class="show-detail__title fade-up">Containment <span style="color:var(--accent);"></span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Personal project · Unreal Engine 5.8 · 2026</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="rt-video"><video src="../assets/video/prisonrave-main.mp4" poster="../assets/stills/prisonrave-main.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <p class="rt-caption">23 s · 2.39:1 · ~200 MetaHumans</p>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Role</div>
+          <div class="show-detail__info-value">Crowd, lighting, music sync, rendering</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Engine</div>
+          <div class="show-detail__info-value">Unreal Engine 5.8</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Tools</div>
+          <div class="show-detail__info-value">MetaHuman Crowd (experimental) · Sequencer · MRQ · Python</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Year</div>
+          <div class="show-detail__info-value">2026</div>
+        </div>
+      </div>
+      <p class="show-detail__description fade-up">A rave inside a prison cellblock: about 200 MetaHumans packed under the catwalks, dancing to a DJ, with the lights cut to the beat. It's the third piece in the set, and the first with people in it.</p>
+      <p class="show-detail__description fade-up">The goal was a dancing crowd that reads as real on one 32 GB PC, using Unreal 5.8's new experimental MetaHuman Crowd plugin, with the final frames rendered through Movie Render Queue. Most of the work was getting an experimental tool to behave in production: finding its bugs, working around them, and staying inside a memory budget it was never sized for.</p>
+      <h3 class="show-detail__section-heading">Angles</h3>
+      <div class="rt-shots rt-shots--angles">
+        <figure><video src="../assets/video/prisonrave-cine.mp4" poster="../assets/stills/prisonrave-cine.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Cinematic 239 · 2.39:1</figcaption></figure>
+        <figure><video src="../assets/video/prisonrave-cine240.mp4" poster="../assets/stills/prisonrave-cine240.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Cinematic 240 · 2.39:1</figcaption></figure>
+        <figure><video src="../assets/video/prisonrave-cine241.mp4" poster="../assets/stills/prisonrave-cine241.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Cinematic 241 · 2.39:1 · no DJ yet</figcaption></figure>
+        <figure><video src="../assets/video/prisonrave-cine242.mp4" poster="../assets/stills/prisonrave-cine242.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Cinematic 242 · 16:9</figcaption></figure>
+        <figure><video src="../assets/video/prisonrave-cine243.mp4" poster="../assets/stills/prisonrave-cine243.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Cinematic 243 · 2.39:1</figcaption></figure>
+        <figure><video src="../assets/video/prisonrave-yt.mp4" poster="../assets/stills/prisonrave-yt.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Wide · 16:9</figcaption></figure>
+      </div>
+      <div class="rt-split rt-split--vertical">
+        <video src="../assets/video/prisonrave-insta.mp4" poster="../assets/stills/prisonrave-insta.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div>
+          <h3 class="show-detail__section-heading" style="margin-top:0">Vertical cut</h3>
+          <p class="show-detail__description">The same performance, framed for phones. It's a separate camera in the same sequence, so the crowd, the lights and the beat sync are identical. Only the framing changes. It was rendered in the same batch as the other cameras.</p>
+        </div>
+      </div>
+      <h3 class="show-detail__section-heading">Passes</h3>
+      <div data-compare>
+      <div class="compare-tabs">
+        <button class="compare-tab is-active" data-src="../assets/video/prisonrave-cine243-nocrowd.mp4" data-under="../assets/video/prisonrave-cine243.mp4" data-label="No crowd">243 · No crowd</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine242-nocrowd.mp4" data-under="../assets/video/prisonrave-cine242.mp4" data-label="No crowd">242 · No crowd</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine243-light.mp4" data-under="../assets/video/prisonrave-cine243.mp4" data-label="Lighting">243 · Detail lighting</button>
+        <button class="compare-tab" data-src="../assets/video/prisonrave-cine242-light.mp4" data-under="../assets/video/prisonrave-cine242.mp4" data-label="Lighting">242 · Detail lighting</button>
+      </div>
+      <div class="compare">
+        <video class="compare__under" src="../assets/video/prisonrave-cine243.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="compare__top"><video src="../assets/video/prisonrave-cine243-nocrowd.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="compare__handle"></div>
+        <span class="compare__label compare__label--l">No crowd</span>
+        <span class="compare__label compare__label--r">Final</span>
+      </div>
+      </div>
+      <p class="rt-caption">Drag to compare the final frame with the empty set (no crowd) and the detail-lighting pass. All passes rendered headless with my render submitter.</p>
+      <h3 class="show-detail__section-heading">What I built</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item">A 198-person MetaHuman crowd on the UE 5.8 MetaHuman Crowd plugin (experimental), built from 9 characters made from MetaHuman Creator presets and adjusted.</div>
+        <div class="show-detail__list-item">16 dance clips retargeted from Manny to the MetaHuman skeleton.</div>
+        <div class="show-detail__list-item">A layout script that places every dancer. No two neighbours share a dance, and the energy rises toward the DJ: calmer moves at the entry, the high-energy clips at the booth. The catwalk crowd follows the same rules.</div>
+        <div class="show-detail__list-item">Workarounds for the plugin's bugs (see tech notes), so faces and bodies render correctly at crowd scale.</div>
+        <div class="show-detail__list-item">Beat-synced lighting baked from the track at 145 BPM: 62 LED wall panels as an audio visualizer driven by a baked audio-spectrum texture (bass at the DJ end); 9 centre fluoro tubes flashing on the offbeat hi-hat as a chase that flips direction each bar; 6 moving-head beams and a DJ light strip keyed to the kick, with sweeps, a build strobe, a hit on the drop and a blackout at the end.</div>
+        <div class="show-detail__list-item">Seven cameras (2.39:1 angles, a 16:9 wide and a 9:16 vertical), plus empty-set and detail-lighting passes, all rendered headless with <a href="../lab/darkroom.html">Darkroom</a> with 0 failures.</div>
+      </div>
+      <h3 class="show-detail__section-heading">The setup</h3>
+      <p class="show-detail__description fade-up">Containment runs on one home PC: a Ryzen 7 1700, 32 GB of RAM, an RTX 5070 Ti with 16 GB, and a Windows page file that takes whatever doesn't fit in RAM.</p>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>9 characters</strong>, made from MetaHuman Creator presets and adjusted, with a mix of builds and heights.</div>
+        <div class="show-detail__list-item"><strong>16 dances</strong> from a Party Pack, retargeted from Manny to the MetaHuman skeleton with an IK Retargeter. All play in place and loop, and each is rated low, medium or high energy.</div>
+        <div class="show-detail__list-item"><strong>One Collection per dance.</strong> The crowd plugin bakes one animation per crowd type, so each dance has its own Collection with all 9 characters baked in: about 900 MB on disk each, 9 to 13 minutes per rebuild.</div>
+        <div class="show-detail__list-item"><strong>Instances and data assets.</strong> One instance per character in each Collection; a data asset per dance lists them, and each agent picks a character from that list.</div>
+        <div class="show-detail__list-item"><strong>198 single-point spawners</strong>, each with an EQS query that returns one point at the spawner. A layout script places them and assigns dances (no same-dance neighbours, energy rising toward the DJ). The 16 behind the DJ were parked when the desk went in.</div>
+        <div class="show-detail__list-item"><strong>A crowd sublevel</strong>, hidden with a Level Visibility track for the empty-set passes, which works in headless renders.</div>
+        <div class="show-detail__list-item"><strong>At render time</strong> the agents are instanced skinned meshes at low LODs. They only spawn at runtime, so Movie Render Queue warms up for 3000 frames before recording.</div>
+      </div>
+      <h3 class="show-detail__section-heading">What it runs at</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>CPU vs GPU:</strong> the editor runs about 31 to 33 fps with 190 agents, with the GPU at 50 to 56%. The CPU is the limit, not the GPU; for the final frames it doesn't matter, because Movie Render Queue isn't real time.</div>
+        <div class="show-detail__list-item"><strong>VRAM:</strong> 11.2 GB with the 16 Collections loaded, 12.5 GB with 190 agents dancing, out of 16 GB. The crowd itself adds about 1.3 GB.</div>
+        <div class="show-detail__list-item"><strong>Memory (RAM plus page file):</strong> about 36 GB with the level freshly loaded. One Collection rebuild took it from about 45 to 67 GB and the editor never gave it back. The full crowd in Simulate peaks around 71 GB.</div>
+        <div class="show-detail__list-item"><strong>Final renders:</strong> 9 jobs of 835 frames, all on the first try, about 2 h 25 min in total, 11 to 20 minutes per camera (0.8 to 1.5 s per frame), with the whole PC peaking around 70 to 77 GB per crowd camera.</div>
+      </div>
+      <h3 class="show-detail__section-heading">Same detail, less memory: what I'd change</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>One Collection, several dances.</strong> Each dance is a full copy of the same 9 characters. A Collection can bake a list of animations, so a few shared Collections could replace the 16 copies. Planned; it needs a two-dance test first, measured for build time, memory and file size.</div>
+        <div class="show-detail__list-item"><strong>A smaller palette per Collection.</strong> Tested: removing unused hair grooms cut a rebuild from 13.5 to 9 minutes, but memory stayed the same. Limiting each groom to the heads that wear it is what let the larger build finish. Next: cap crowd textures near 1K and drop LODs the crowd never uses.</div>
+        <div class="show-detail__list-item"><strong>Fewer spawners.</strong> Interleaved sub-lattices (offset grids that never share a point) would cover the same layout with about 48 spawners instead of 198. An earlier crowd version did this at 94 agents with 22 spawners. It's about a lighter scene, not memory.</div>
+        <div class="show-detail__list-item"><strong>Rebuild each Collection in its own process.</strong> A small C++ plugin would expose the rebuild so a batch runner can do one Collection per headless Unreal process, and the memory goes away with each process. Planned, not built: see <a href="../lab/crowd-rebuild.html">Crowd Rebuild</a>.</div>
+        <div class="show-detail__list-item"><strong>64 GB of RAM and a fixed page file</strong> on the work drive, so rebuilds stop paging. Planned.</div>
+        <div class="show-detail__list-item"><strong>Unload the crowd while lighting.</strong> The crowd already lives in its own sublevel; measuring the saving is next.</div>
+      </div>
+      <p class="show-detail__description fade-up">I'll add an old-vs-new comparison with measured results once these are done.</p>
+      <h3 class="show-detail__section-heading">Today vs planned</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>Dance Collections:</strong> 16, one per dance → a few shared Collections with several dances each.</div>
+        <div class="show-detail__list-item"><strong>Collection size:</strong> about 900 MB each, around 14 GB in total → smaller, with textures capped near 1K and unused LODs dropped.</div>
+        <div class="show-detail__list-item"><strong>Spawners:</strong> 198, one per agent → about 48 interleaved sub-lattices.</div>
+        <div class="show-detail__list-item"><strong>Rebuild workflow:</strong> 1 per editor restart, by hand, 9 to 13 minutes each → a headless batch overnight, one process per Collection (about 2.5 hours for 15).</div>
+        <div class="show-detail__list-item"><strong>Memory after a rebuild:</strong> held until the editor restarts (about 45 → 67 GB) → released when each process exits.</div>
+        <div class="show-detail__list-item"><strong>Peak memory, full crowd:</strong> about 71 GB on 32 GB of RAM → target: fit in 64 GB of RAM with no paging.</div>
+      </div>
+      <h3 class="show-detail__section-heading">Crowd toolkit</h3>
+      <p class="show-detail__description fade-up">Unreal Engine 5.8 (MetaHuman Creator, MetaHuman Crowd on Mass, EQS, IK Retargeter, Editor Utility tools, Python, Sequencer, Material Parameter Collections, Movie Render Queue) · Party Pack dances (Fab) · <a href="../lab/darkroom.html">Darkroom</a> · librosa · Tripo3D · Nano Banana · Claude</p>
+      <h3 class="show-detail__section-heading">Tech notes</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>White faces.</strong> The crowd plugin copied the editor skin settings into the crowd material, which switched off the baked face textures, so every head rendered white. The first fix patched the face materials after each build; the final crowd uses a simpler setup that doesn't need the patch.</div>
+        <div class="show-detail__list-item"><strong>Floating heads.</strong> One build setting merges only the visible skin into the outfit. With no top, the torso disappeared; with a top, the body took the wrong shape. Turning it off renders the real body. The crowd's garments also didn't fit the custom bodies, so the crowd stays in the MetaHuman base layer by decision. Fully dressed hero characters near the camera are a later pass.</div>
+        <div class="show-detail__list-item"><strong>A memory budget built around restarts.</strong> Rebuilding one crowd Collection pushed system memory commit from about 45 GB to about 67 GB on a 32 GB machine: one rebuild per editor restart, so 16 Collections meant 16 restarts. The fix for this piece was discipline: one Collection at a time, save, restart.</div>
+        <div class="show-detail__list-item"><strong>The crowd arriving late in the render.</strong> With a short warm-up, Movie Render Queue started recording before the crowd had fully spawned, so the first frames were half-empty. A 3000-frame warm-up gives a full crowd from frame 0.</div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

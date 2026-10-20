@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowd Rebuild — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link">Personal</a>
+      <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+      <a href="../brain.html" class="nav__link">Brain</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link">Personal</a>
+    <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+    <a href="../brain.html" class="nav__link">Brain</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../lab.html" class="show-detail__back">← Back to Lab</a>
+      <h1 class="show-detail__title fade-up">Crowd Rebuild <span style="color:var(--accent);">· headless MetaHuman Crowd builds</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Pipeline tool · C++ · Python · Unreal Engine 5.8 · Planned</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Status</div>
+          <div class="show-detail__info-value">Planned · not built yet</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Stack</div>
+          <div class="show-detail__info-value">Unreal C++ plugin · Python · commandlet</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Built for</div>
+          <div class="show-detail__info-value">Containment's crowd</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Estimate</div>
+          <div class="show-detail__info-value">About a day to build</div>
+        </div>
+      </div>
+      <p class="show-detail__description fade-up">On Containment, every crowd dance lives in its own MetaHuman Crowd Collection, and Unreal 5.8 has to rebuild a Collection whenever its looks or characters change. Each rebuild pushed system memory commit from about 45 GB to about 67 GB on a 32 GB PC, and the editor never gave it back. So it was one rebuild per editor restart, and 16 dance Collections meant 16 restarts by hand. There was no way to script around it: the rebuild lives in one C++ function (<code>UMetaHumanCollection::Build</code>) with no Python call, console command or commandlet behind it.</p>
+      <p class="show-detail__description fade-up">The plan is a small C++ plugin that exposes that function to Python and a commandlet, plus a batch runner in the same shape as <a href="darkroom.html">Darkroom</a>: each Collection rebuilds in its own headless Unreal process, so the memory goes away when the process exits. It isn't built yet. For this piece, one rebuild per restart got the job done. The tool is worth building when full rebuilds keep coming: new looks, new characters, an engine update. The builds stay at 9 to 13 minutes each, but they run unattended, so a batch of 15 takes about 2.5 hours overnight.</p>
+      <h3 class="show-detail__section-heading">What it will do</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>Expose the build:</strong> a small editor plugin that calls the Collection build from Python or a commandlet. The engine only runs it from the editor's Rebuild button.</div>
+        <div class="show-detail__list-item"><strong>One Collection, one process:</strong> each rebuild runs in its own headless Unreal process and saves, then the process exits and releases its memory. No restarts, nothing builds up.</div>
+        <div class="show-detail__list-item"><strong>Batch runner:</strong> a list of Collections rebuilt one after another overnight, reusing Darkroom's pre-flight checks (disk space, editor closed) and crash retry.</div>
+        <div class="show-detail__list-item"><strong>Checks each result:</strong> confirms each Collection file was rewritten and is the expected size before moving on, and logs the time and peak memory for every build.</div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

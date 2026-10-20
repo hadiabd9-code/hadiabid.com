@@ -41,7 +41,7 @@
       <div class="show-detail__info-grid fade-up fade-up-d3">
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Role</div>
-          <div class="show-detail__info-value">Solo · design and build</div>
+          <div class="show-detail__info-value">Design and build</div>
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Stack</div>
@@ -56,9 +56,19 @@
           <div class="show-detail__info-value">In use for this portfolio</div>
         </div>
       </div>
-      <div class="placeholder">Overview: the problem (editor renders crashing the whole queue, wrong maps, the open editor competing for GPU memory) and what the tool does about it.</div>
+      <p class="show-detail__description fade-up">Darkroom is a small headless render farm for Unreal's Movie Render Queue. I built it out of real friction on this portfolio. One GPU crash killed the whole editor render queue. A Desert job got queued on the Forest map. And the open editor held about 14 GB of RAM while rendering.</p>
+      <p class="show-detail__description fade-up">Darkroom runs each job in its own off-screen Unreal process. It checks the job before it starts, retries the job if it crashes, and keeps going with the rest of the batch. I designed it and directed the build with my agent setup: the AI wrote most of the code; the scope, the checks and the debugging calls were mine. It's v1: built for my own renders and in use for this portfolio, not a public release.</p>
       <h3 class="show-detail__section-heading">What it does</h3>
-      <div class="placeholder">Bullets to finalize: job list → pre-flight checks (assets, map/sequence mismatch, disk, open editor) → manifests built headless → each job in its own off-screen process → crash detection + retry → report → MP4 encode → live dashboard.</div>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>Job list:</strong> each job is a sequence, a map, a render preset and the expected frame count.</div>
+        <div class="show-detail__list-item"><strong>Pre-flight checks:</strong> the assets exist, the sequence matches its map, there's enough disk space for the frame count, and nothing heavy (like the editor) is still open. Finished jobs get skipped.</div>
+        <div class="show-detail__list-item"><strong>Builds the render queue headless:</strong> one background Unreal run writes a queue file per job, the same format the editor's own remote render uses.</div>
+        <div class="show-detail__list-item"><strong>One process per job:</strong> each render runs off-screen in its own process, so one crash never takes down the batch.</div>
+        <div class="show-detail__list-item"><strong>Crash detection and retry:</strong> reads the exit code and the log (GPU crash, fatal error) and re-runs the job.</div>
+        <div class="show-detail__list-item"><strong>View modes on demand:</strong> lighting-only and wireframe passes are set up automatically, so no editor is needed.</div>
+        <div class="show-detail__list-item"><strong>Report and encode:</strong> frames, minutes and seconds per frame for each job, then an MP4 encode with ffmpeg.</div>
+        <div class="show-detail__list-item"><strong>Live dashboard:</strong> the current job with its latest frame, progress and ETA, the queue, the history, and GPU, VRAM, temperature and disk.</div>
+      </div>
       <h3 class="show-detail__section-heading">Results</h3>
       <div class="show-detail__info-grid fade-up fade-up-d3">
         <div class="show-detail__info-item">
@@ -71,16 +81,20 @@
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Forest 4K pass</div>
-          <div class="show-detail__info-value">~6 min headless</div>
+          <div class="show-detail__info-value">~6 min headless (77 min in the editor)</div>
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">View modes</div>
           <div class="show-detail__info-value">Beauty · Lighting · Wireframe</div>
         </div>
       </div>
-      <div class="placeholder">Check these numbers before publishing.</div>
       <h3 class="show-detail__section-heading">Next</h3>
-      <div class="placeholder">Roadmap: resume from last frame, phone notifications, web UI for building queues.</div>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>Resume from the last good frame</strong> instead of re-running the whole job after a crash.</div>
+        <div class="show-detail__list-item"><strong>Phone notifications</strong> when a job finishes or fails.</div>
+        <div class="show-detail__list-item"><strong>A queue builder in the browser:</strong> pick the sequence, map and preset from the project, then start, stop and reorder.</div>
+        <div class="show-detail__list-item"><strong>Project-agnostic setup:</strong> a setup wizard that finds the Unreal install and project.</div>
+      </div>
     </div>
   </div>
   <footer class="footer">

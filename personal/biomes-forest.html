@@ -36,12 +36,12 @@
       <h1 class="show-detail__title fade-up">Biomes <span style="color:var(--accent);">· Forest</span></h1>
       <p class="show-detail__meta fade-up fade-up-d1">Personal project · Unreal Engine 5.8 · 2026</p>
       <div class="show-detail__divider fade-up fade-up-d2"></div>
-      <div class="rt-video"><video src="../assets/video/forest-wide.mp4" poster="../assets/stills/forest-wide.jpg" autoplay muted loop playsinline preload="metadata"></video></div>
+      <div class="rt-video rt-video--embed"><iframe style="aspect-ratio:2.39 / 1" src="https://www.youtube-nocookie.com/embed/4hkIa1xPnUw?rel=0&amp;playsinline=1" title="Biomes · Forest (with sound)" width="1920" height="1080" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <p class="rt-caption">10 s · 2.39:1 · rendered in Movie Render Queue</p>
       <div class="show-detail__info-grid fade-up fade-up-d3">
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Role</div>
-          <div class="show-detail__info-value">Solo · environment, VFX, lighting, rendering</div>
+          <div class="show-detail__info-value">Environment, VFX, lighting, rendering</div>
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Engine</div>
@@ -49,14 +49,15 @@
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Tools</div>
-          <div class="show-detail__info-value">Niagara · PCG · Water · Sequencer · MRQ</div>
+          <div class="show-detail__info-value">Unreal 5.8 · Tripo3D · Water · PCG · Niagara · ElevenLabs</div>
         </div>
         <div class="show-detail__info-item">
           <div class="show-detail__info-label">Year</div>
           <div class="show-detail__info-value">2026</div>
         </div>
       </div>
-      <div class="placeholder">Overview: one or two paragraphs on the idea (ruined temple, river, crashed plane), the goal of the piece, and what it shows about you.</div>
+      <p class="show-detail__description fade-up">Forest is the second Biomes world, continuing the study Desert started. A river runs through an old northern forest. A yellow twin-prop plane has crashed in the shallows, and upstream a giant stone head pours water from its mouth into a walled basin, which spills over a ledge as a waterfall. There are no characters this time: the subject is the environment, the water and the atmosphere.</p>
+      <p class="show-detail__description fade-up">The goal was a world that holds up as a still and moves well: wind in the trees, water that flows, and foam that sits where real foam would. With the models coming from Tripo3D, most of my time went into the production side: water bodies carved into the landscape, effects fitted to the real heights in the level, a procedural forest, backlit light and fog, and a render that matches what I saw in the editor.</p>
       <h3 class="show-detail__section-heading">Passes</h3>
       <div data-compare>
       <div class="compare-tabs">
@@ -68,8 +69,8 @@
         <button class="compare-tab" data-src="../assets/video/forest-cam4-wire.mp4" data-under="../assets/video/forest-cam4.mp4" data-label="Wireframe">Low · Wireframe</button>
       </div>
       <div class="compare">
-        <video class="compare__under" src="../assets/video/forest-wide.mp4" autoplay muted loop playsinline></video>
-        <div class="compare__top"><video src="../assets/video/forest-wide-light.mp4" autoplay muted loop playsinline></video></div>
+        <video class="compare__under" src="../assets/video/forest-wide.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="compare__top"><video src="../assets/video/forest-wide-light.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
         <div class="compare__handle"></div>
         <span class="compare__label compare__label--l">Lighting</span>
         <span class="compare__label compare__label--r">Final</span>
@@ -82,11 +83,35 @@
         <video src="../assets/video/forest-cam4.mp4" poster="../assets/stills/forest-cam4.jpg" autoplay muted loop playsinline preload="metadata"></video>
       </div>
       <h3 class="show-detail__section-heading">What I built</h3>
-      <div class="placeholder">Bullet list, e.g. ledge waterfall rebuilt for the real 5.7 m drop; shape-following foam via hidden proxy meshes + GPU mesh sampling; river foam trail kept inside the banks; temple mouth pour; PCG forest; ambient audio.</div>
-      <h3 class="show-detail__section-heading">Breakdown</h3>
-      <div class="placeholder">Breakdown video or stills: empty terrain → water → temple → foliage → FX → lighting.</div>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item">Brought the hero models in from Tripo3D (the stone temple head, the ruin arch, the wall segments, the crashed plane and the river terrain) and set them up in Unreal: scale, placement, materials, and collision on the stairs so you can walk them.</div>
+        <div class="show-detail__list-item">Built and sculpted the landscape behind the river (the raised terrace, the ground under the temple and the back forest), and set up Unreal Water bodies to carve into it: the main river runs down the terrain, and a second river body carves the walled basin's bed into the landscape.</div>
+        <div class="show-detail__list-item">Shaped the Niagara effects for this scene, tuned to read well on camera and stay light on performance, and fitted to the level's real heights: the ledge waterfall running wall to wall, the thick mouth pour onto the temple platform, foam around the rocks and the plane, a foam trail that drifts downstream and stays inside the banks, and engine smoke from the plane.</div>
+        <div class="show-detail__list-item">Made the foam follow shapes around the arch and the plane hull. Hidden proxy meshes trace each outline, and GPU mesh sampling spawns the foam along them.</div>
+        <div class="show-detail__list-item">Scattered the back forest with PCG on a sculpted landscape in four layers (conifers, mid trees, saplings, undergrowth), with exclusion zones keeping the water and the temple clear.</div>
+        <div class="show-detail__list-item">Dressed the river with Megaplants trees on dynamic wind, undergrowth and Megascans rocks and cliffs, and used Megascans cliffs again for the distant mountains.</div>
+        <div class="show-detail__list-item">Lighting: a backlit sun, volumetric fog and god rays, and aerial perspective that puts a blue haze on the mountains and a light depth wash over the back forest.</div>
+        <div class="show-detail__list-item">Ambient sound from ElevenLabs sound effects (river, waterfall, wind), placed in the level and recorded straight from the engine with the render.</div>
+        <div class="show-detail__list-item">Walkable: a third-person character can walk the banks and the temple stairs.</div>
+      </div>
+      <h3 class="show-detail__section-heading">Toolkit</h3>
+      <p class="show-detail__description fade-up">Unreal Engine 5.8 (Water, Landscape, PCG, Niagara, Sequencer, Movie Render Queue) · Tripo3D · Megascans · Megaplants · ElevenLabs · Nano Banana · Claude</p>
       <h3 class="show-detail__section-heading">Tech notes</h3>
-      <div class="placeholder">Short notes on the interesting problems, e.g. two overlapping water bodies hiding the foam, the Megaplants wind gizmo rendering in MRQ.</div>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>The new river system didn't make it.</strong> I first tried Unreal's new Shallow Water River (Water Advanced) for flow and foam around the rocks, but its simulation baked out empty, even in a clean 5.8.3 test project with a landscape, and the likely fix (collision profiles) turned out to be a dead end. So I rolled back to the standard Water Body River and built the foam and ripples around the rocks and the plane with Niagara instead.</div>
+        <div class="show-detail__list-item"><strong>Two water bodies hiding the foam.</strong> The basin had two overlapping river bodies, and one of them was hidden. The hidden one still set the water height, so foam placed right at the surface rendered underneath it. I found it by raising a test actor in steps until it appeared, then put the foam about 14 cm above the surface it was supposed to sit on.</div>
+        <div class="show-detail__list-item"><strong>A plant-wind gizmo showing up in the render.</strong> The Megaplants wind controller has real mesh icons. They look like editor-only helpers but still show in Movie Render Queue. I hid them in game, and the wind still works.</div>
+        <div class="show-detail__list-item"><strong>Measure the drop, don't trust the note.</strong> The waterfall was tuned for the wrong height. Reading the actual water-surface heights put the fall at about 5.7 m, so I re-timed the particle lifetimes to end the sheet at the waterline instead of letting it sink through.</div>
+      </div>
+      <h3 class="show-detail__section-heading">The journey</h3>
+      <p class="show-detail__description fade-up">Forest reused the render side Desert built: shared Movie Render Queue presets, one sequence per camera, and beauty, lighting and wireframe passes rendered headless through <a href="../lab/darkroom.html">Darkroom</a>. That left this world free to be about water and environment. The walled basin is a second Water body that carves its own bed into a sculpted landscape. The back forest is PCG on that same landscape, which only placed trees once the landscape's collision was working.</p>
+      <h3 class="show-detail__section-heading">What's next</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>A new temple.</strong> First up, I want to redesign the stone temple head with a stronger, more detailed design, so the centrepiece holds up in closer shots.</div>
+        <div class="show-detail__list-item"><strong>Wildlife.</strong> I plan to bring back the original "hunt" idea for this world, with animals moving through the forest and along the river.</div>
+        <div class="show-detail__list-item"><strong>A richer water pass.</strong> I want the shoreline foam and flow to come from the water system itself, replacing the Niagara foam collars I placed by hand.</div>
+        <div class="show-detail__list-item"><strong>Time of day and weather.</strong> I'll add changing light and weather, like rain or mist rolling down the valley, to see how the same world reads in a different mood.</div>
+      </div>
     </div>
   </div>
   <footer class="footer">

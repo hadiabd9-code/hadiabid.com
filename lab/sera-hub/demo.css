@@ -1,0 +1,9 @@
+/* Public demo tweaks on top of the hub's style.css */
+.brand .back{color:inherit;text-decoration:none;opacity:.6;margin-right:10px}
+.brand .back:hover{opacity:1}
+.outliner li{cursor:default}
+.command [disabled]{opacity:.45;cursor:not-allowed}
+@media (max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:40px minmax(0,1fr) 48px;grid-template-areas:"top" "vp" "cmd";height:100%}
+  .panel.left,.panel.right,.menu{display:none}
+}

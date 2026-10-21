@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SERA Hub — Hadi Abid</title>
+<meta name="description" content="Interactive demo of SERA Hub, the custom control room for my AI agent setup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><a class="back" href="../../lab.html" title="Back to Lab">←</a><span class="logo"></span>SERA Hub</div>
+    <nav class="menu" aria-label="Views">
+      <span class="tab on">Agents</span>
+      <span class="tab off">Runs</span>
+      <span class="tab off">Approvals</span>
+    </nav>
+    <div class="stat"><span id="seraState" class="state">idle</span><i id="conn" class="dot live"></i><span id="connText">demo</span> · <span id="count">0</span> agents</div>
+  </header>
+
+  <aside class="panel left">
+    <section>
+      <h2>Outliner</h2>
+      <ul id="outliner" class="outliner"></ul>
+    </section>
+  </aside>
+
+  <main class="viewport" id="viewport">
+    <div class="vp-hud">
+      <span id="hudLeft">Top · Deck</span><span id="hudRight"></span>
+    </div>
+    <canvas id="shipCanvas" class="ship-canvas" aria-label="SERA ship deck"></canvas>
+    <div id="shipTip" class="ship-tip" hidden></div>
+    <div class="vp-switch" role="group" aria-label="Viewport">
+      <button data-view="ship" class="on">Ship</button>
+      <button id="schematicBtn" class="sub" title="Blueprint look" aria-pressed="false">Schematic</button>
+    </div>
+  </main>
+
+  <aside class="panel right">
+    <div class="ptabs" role="tablist">
+      <button class="ptab on" data-tab="chat" role="tab">Chat</button>
+      <button class="ptab" data-tab="today" role="tab">Today</button>
+      <button class="ptab" data-tab="props" role="tab">Properties</button>
+    </div>
+    <div class="pane" id="pane-chat">
+      <div id="chatlog" class="chatlog"><div class="msg sys"><div class="body">Public demo. Chat is offline here.</div></div></div>
+    </div>
+    <div class="pane" id="pane-today" hidden><div id="today" class="today"></div></div>
+    <div class="pane" id="pane-props" hidden><div id="props" class="props"></div></div>
+  </aside>
+
+  <footer class="command">
+    <button class="icon" disabled aria-label="Talk">🎙</button>
+    <input type="text" placeholder="Talk to SERA (no access in the demo)" disabled>
+    <select disabled aria-label="Model"><option>Opus</option></select>
+    <button disabled>Send</button>
+    <button class="icon" disabled aria-label="Voice">🔊</button>
+    <button class="icon" disabled aria-label="New conversation">↺</button>
+  </footer>
+</div>
+<script type="module" src="demo.js"></script>
+<script type="module" src="ship.js"></script>
+</body>
+</html>

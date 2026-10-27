@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reel Room — Hadi Abid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">HADI ABID</a>
+    <div class="nav__links">
+      <a href="../work.html" class="nav__link">Work</a>
+      <a href="../personal.html" class="nav__link">Personal</a>
+      <a href="../genai.html" class="nav__link">Gen AI</a>
+      <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+      <a href="../index.html#contact" class="nav__link">Contact</a>
+      <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile-menu">
+    <a href="../work.html" class="nav__link">Work</a>
+    <a href="../personal.html" class="nav__link">Personal</a>
+    <a href="../genai.html" class="nav__link">Gen AI</a>
+    <a href="../lab.html" class="nav__link nav__link--active">Lab</a>
+    <a href="../index.html#contact" class="nav__link">Contact</a>
+    <button class="nav__resume" title="Resume — coming soon">Resume ↓</button>
+  </div>
+  <div class="page-wrapper">
+    <div class="rt-detail">
+      <a href="../lab.html" class="show-detail__back">← Back to Lab</a>
+      <h1 class="show-detail__title fade-up">Reel Room <span style="color:var(--accent);">· shot review for AI and 3D films</span></h1>
+      <p class="show-detail__meta fade-up fade-up-d1">Pipeline tool · JavaScript · Python · Blender · 2026</p>
+      <div class="show-detail__divider fade-up fade-up-d2"></div>
+      <div class="rt-video"><img src="../assets/stills/reel-room-shot.jpg" alt="Reel Room shot page: version tabs, department approvals, notes"></div>
+      <p class="rt-caption">Shot page: every version of the shot in pipeline order, approval per department, notes and draw-overs.</p>
+      <div class="show-detail__info-grid fade-up fade-up-d3">
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Role</div>
+          <div class="show-detail__info-value">Design and build</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Stack</div>
+          <div class="show-detail__info-value">JavaScript · Python · Blender</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Built</div>
+          <div class="show-detail__info-value">October 2026</div>
+        </div>
+        <div class="show-detail__info-item">
+          <div class="show-detail__info-label">Status</div>
+          <div class="show-detail__info-value">In use on Halden 418 and EQ Monolith</div>
+        </div>
+      </div>
+      <p class="show-detail__description fade-up">Reel Room is my review room for Gen AI and 3D films. Every shot and every asset gets a page with all its versions, notes with draw-overs, and an approval per department. One pass of every shot, then notes, then one batched redo.</p>
+      <p class="show-detail__description fade-up">I designed it and directed the build with my agent setup: the AI wrote most of the code; the workflow, the review rules and the calls were mine. It's an in-house tool, not a public release. <a href="../index.html#contact">Ask me for a live demo.</a></p>
+      <div class="rt-video"><img src="../assets/stills/reel-room.jpg" alt="Reel Room shot grid with each shot&rsquo;s latest version"></div>
+      <p class="rt-caption">Shot grid: each card shows the shot&rsquo;s latest output, its status and open notes.</p>
+      <div class="rt-video"><img src="../assets/stills/reel-room-asset.jpg" alt="Reel Room asset page with approved key frames"></div>
+      <p class="rt-caption">Asset page: design sheet and key frames as versions, each approved or sent back on its own.</p>
+      <h3 class="show-detail__section-heading">What it does</h3>
+      <div class="show-detail__list fade-up">
+        <div class="show-detail__list-item"><strong>Versions in pipeline order:</strong> board, animatic, layout, key frame, Gen AI, render, comp. A shot opens on its latest output.</div>
+        <div class="show-detail__list-item"><strong>Notes and draw-overs:</strong> on a whole shot, a version or a single frame.</div>
+        <div class="show-detail__list-item"><strong>Approvals:</strong> per department and per version; redo lists come straight from it.</div>
+        <div class="show-detail__list-item"><strong>Asset pages:</strong> character sheets, key frames, clips and models, versioned like shots.</div>
+        <div class="show-detail__list-item"><strong>Camera compare:</strong> alternative layout cameras side by side, pick one.</div>
+        <div class="show-detail__list-item"><strong>Full cut:</strong> every shot&rsquo;s latest version played back to back.</div>
+        <div class="show-detail__list-item"><strong>Project builder:</strong> makes the folder tree and a Blender layout file per shot on my PC.</div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <span>© 2026 Hadi Abid</span>
+    <span>Toronto · Canada</span>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/realtime.js"></script>
+</body>
+</html>

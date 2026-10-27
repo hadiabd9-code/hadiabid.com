@@ -1,0 +1,8 @@
+{
+  "name": "hadiabid-site",
+  "private": true,
+  "description": "Static site. wrangler is pinned so Cloudflare builds never pick up a new version by surprise.",
+  "devDependencies": {
+    "wrangler": "4.154.0"
+  }
+}

@@ -1,0 +1,9 @@
+// Cloudflare Worker "portfolio": static site, deployed by Workers Builds on push to main.
+// Pinned here so builds never auto-detect settings. Files excluded from publishing: .assetsignore
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-10-23",
+  "observability": { "enabled": true },
+  "assets": { "directory": "." }
+}

@@ -1,0 +1,7 @@
+# Never publish these as site files (Cloudflare Workers assets)
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+.wrangler
+node_modules
